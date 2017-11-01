@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B2F6CD451FAA947F0075F964 /* SwiftExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F6CD441FAA947F0075F964 /* SwiftExtensions.m */; };
-		B2F6CD461FAA947F0075F964 /* SwiftExtensions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B2F6CD431FAA947F0075F964 /* SwiftExtensions.h */; };
+		B2F6CD4D1FAA949D0075F964 /* AnyKeyPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F6CD4C1FAA949D0075F964 /* AnyKeyPath.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -18,7 +17,6 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				B2F6CD461FAA947F0075F964 /* SwiftExtensions.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -26,8 +24,7 @@
 
 /* Begin PBXFileReference section */
 		B2F6CD401FAA947F0075F964 /* libSwiftExtensions.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSwiftExtensions.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		B2F6CD431FAA947F0075F964 /* SwiftExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftExtensions.h; sourceTree = "<group>"; };
-		B2F6CD441FAA947F0075F964 /* SwiftExtensions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwiftExtensions.m; sourceTree = "<group>"; };
+		B2F6CD4C1FAA949D0075F964 /* AnyKeyPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyKeyPath.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +57,7 @@
 		B2F6CD421FAA947F0075F964 /* SwiftExtensions */ = {
 			isa = PBXGroup;
 			children = (
-				B2F6CD431FAA947F0075F964 /* SwiftExtensions.h */,
-				B2F6CD441FAA947F0075F964 /* SwiftExtensions.m */,
+				B2F6CD4C1FAA949D0075F964 /* AnyKeyPath.swift */,
 			);
 			path = SwiftExtensions;
 			sourceTree = "<group>";
@@ -97,6 +93,7 @@
 				TargetAttributes = {
 					B2F6CD3F1FAA947F0075F964 = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -123,7 +120,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2F6CD451FAA947F0075F964 /* SwiftExtensions.m in Sources */,
+				B2F6CD4D1FAA949D0075F964 /* AnyKeyPath.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,10 +234,14 @@
 		B2F6CD4A1FAA947F0075F964 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -248,10 +249,13 @@
 		B2F6CD4B1FAA947F0075F964 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
