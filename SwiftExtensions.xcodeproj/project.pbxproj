@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B25BA6111FABDD3D00272E85 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25BA6101FABDD3D00272E85 /* UIViewController.swift */; };
 		B2F6CD4D1FAA949D0075F964 /* AnyKeyPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F6CD4C1FAA949D0075F964 /* AnyKeyPath.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B25BA6101FABDD3D00272E85 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		B2F6CD401FAA947F0075F964 /* libSwiftExtensions.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSwiftExtensions.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2F6CD4C1FAA949D0075F964 /* AnyKeyPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyKeyPath.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				B2F6CD4C1FAA949D0075F964 /* AnyKeyPath.swift */,
+				B25BA6101FABDD3D00272E85 /* UIViewController.swift */,
 			);
 			path = SwiftExtensions;
 			sourceTree = "<group>";
@@ -120,6 +123,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B25BA6111FABDD3D00272E85 /* UIViewController.swift in Sources */,
 				B2F6CD4D1FAA949D0075F964 /* AnyKeyPath.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
