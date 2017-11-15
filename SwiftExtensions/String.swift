@@ -47,11 +47,6 @@ extension String {
         return tokens
     }
 
-    /// Splits a commandline input string and seperates flags along with their parameters
-    func tokenizeCommandline() -> [String] {
-        return self.splitBefore(seperators: [" --", " -"])
-    }
-
     /// Returns true if a string has any one of a list of prefixes
     /// Can be treated like a boolean OR
     func hasPrefix(prefix: [String]) -> Bool{
