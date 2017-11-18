@@ -57,4 +57,16 @@ extension String {
         }
         return false
     }
+
+    /// Convert self to any type that conforms to LosslessStringConvertible
+    func convertTo<T: LosslessStringConvertible>(_ type: T.Type) throws -> T {
+        guard let converted = T.self.init(self) else {
+            throw "Unable to convert \(self) is not a \(T.Type.self)"
+        }
+
+        return converted
+    }
 }
+
+/// Allows the throwing of raw messages
+extension String: Error {}
