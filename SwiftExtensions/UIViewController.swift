@@ -51,4 +51,32 @@ extension UIViewController {
             navBar.titleTextAttributes = oneAlphaAttributes
         }
     }
+    
+    /// Adds a subViewController to self
+    func add(_ child: UIViewController) {
+        addChildViewController(child)
+        view.addSubview(child.view)
+        child.didMove(toParentViewController: self)
+    }
+    
+    /// Adds a subViewController and constraints to self
+    func add(_ child: UIViewController,
+             constraints: (UIView) -> [NSLayoutConstraint]) {
+        addChildViewController(child)
+        view.addSubview(child.view)
+        child.view.translatesAutoresizingMaskIntoConstraints = false
+        child.didMove(toParentViewController: self)
+        NSLayoutConstraint.activate(constraints(child.view))
+    }
+    
+    /// Removes subViewController to self
+    func remove() {
+        guard parent != nil else {
+            return
+        }
+        
+        willMove(toParentViewController: nil)
+        removeFromParentViewController()
+        view.removeFromSuperview()
+    }
 }
